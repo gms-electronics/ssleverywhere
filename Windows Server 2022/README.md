@@ -1,3 +1,5 @@
+#  ATTENTION WORK IN PROGRESS NOT PRODUCTION READY.
+
 # DNS Requierements 
 * Cloudflare as domain DNS server
 * A Cloudflare API Token 
