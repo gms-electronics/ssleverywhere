@@ -11,10 +11,11 @@ The set of scripts and instructions in this repository allow to deploy SSL certi
 # Covered Systems
 Right now we cover following systems: 
 1. Windows Server 2022 including RDP Host (Work in Progress), Terminal Server, IIS (Work in Progress), LDAPS and AD FS (Work in Progress)
-2. The installation of a centralized server to deploy certificates to additional systems
+2. The installation of a centralized server to deploy certificates to additional systems (work in progress)
 2. iDrac from a centralized server (work in progress)
 3. vCenter from a centralized server (work in progress)
 4. vSphere from a centralized server (work in progress)
+5. Proxmox VE 8.2
 
 # Contributors 
 Willingfully or not, some people have significantly contributed to the creation of the scripts.
