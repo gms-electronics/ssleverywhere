@@ -26,4 +26,4 @@ Right now we cover following systems:
 
 # Contributors 
 Willingfully or not, some people have significantly contributed to the creation of the scripts.
-[Ryan Bolger]([url](https://github.com/rmbolger)), who wrote an amazing collection of tools regarding the implementation of let's encrypt on windows via powershell
+* [Ryan Bolger]([url](https://github.com/rmbolger)), who wrote an amazing collection of tools regarding the implementation of let's encrypt on windows via powershell
