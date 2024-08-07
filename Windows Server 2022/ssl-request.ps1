@@ -4,7 +4,7 @@ Install-Module -Name Posh-ACME -Scope AllUsers -Force -SkipPublisherCheck
 Install-Module -Name Posh-ACME.Deploy -Scope AllUsers -Force -SkipPublisherCheck
 
 # Cloud Flare requires a simple API token, securing the string to keep it safe
-$token = ConvertTo-SecureString 'C9kSy_bifnISIcOpTLyYbF9n5o8orJhJcn-hQtNC' -AsPlainText -Force
+$token = ConvertTo-SecureString 'nevercommittired' -AsPlainText -Force
 $pArgs = @{CFToken=$token}
 
 # The default certificate password is "poshacme", but we prefer some extra security. At this point you could also just use the CF token. 
