@@ -11,5 +11,3 @@ The script assumes the following:
 * [POSH-ACME]([url](https://poshac.me/docs/latest/)) Installed
 * [POSH-ACME.deploy]([url](https://poshac.me/docs/latest/))
 * The deployment Script win22-server-ssl-deploy.ps1
-
-# Installation of basic requierements
