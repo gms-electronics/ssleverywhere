@@ -6,9 +6,9 @@
 
 # System Requierements
 The script assumes the following: 
-* Windows 2022 (not tested against other versions, but might work)
+* A Windows 2022 Server that is domain joined (not tested against other versions, but might work)
 * [PSExec Installed](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec)
-* The deployment Script win22-server-ssl-deploy.ps1
+* The deployment Script [win22-server-ssl-deploy.ps1]([url](https://github.com/gms-electronics/ssleverywhere/blob/main/Windows%20Server%202022/ssl-request.ps1))
 
 # Following dependencies are installed directly by the script
 * [POSH-ACME]([url](https://poshac.me/docs/latest/))
