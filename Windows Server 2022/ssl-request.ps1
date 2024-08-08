@@ -7,10 +7,10 @@ Install-Module -Name Posh-ACME.Deploy -Scope AllUsers -Force -SkipPublisherCheck
 $certName = ([System.Net.Dns]::GetHostEntry([string]"localhost").HostName)
 
 # Approach A: User Dialogue
-$cfTokenMessage = 'Please enter the cloudflare token to manage the DNS zone of ' + $certname + 'via Cloudflare API!'
-$cftokenuserentry = Read-Host $cfTokenMessage
-$token = ConvertTo-SecureString $cftokenuserentry -AsPlainText -Force
-# Enter the email for 
+$CFTokenMessage = 'Please enter the cloudflare token to manage the DNS zone of ' + $certname + 'via Cloudflare API!'
+$CFtoken = Read-Host $CFTokenMessage
+$token = ConvertTo-SecureString $CFtoken -AsPlainText -Force
+# Enter the email for notifications if the cert is not renewed.
 $certNotificationMessage = 'Please enter the email to contact if the request for renewal fails'
 $certificateNotificationEmail = Read-Host $certNotificationMessage
 
@@ -18,7 +18,7 @@ $certificateNotificationEmail = Read-Host $certNotificationMessage
 # $token = ConvertTo-SecureString 'nevercommittired' -AsPlainText -Force
 # $certificateNotificationEmail = 'it@gmservice.app' # Where to send notifications if the cert is not renewed. 
 
-# The variable of the token used.
+# The variable of the token effectively used to request DNS entry via API to Cloudflare.
 $pArgs = @{CFToken=$token}
 
 # The default certificate password is "poshacme", but we prefer some extra security. At this point you could also just use the CF token. 
