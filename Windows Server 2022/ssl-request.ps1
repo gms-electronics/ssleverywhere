@@ -3,18 +3,26 @@
 Install-Module -Name Posh-ACME -Scope AllUsers -Force -SkipPublisherCheck
 Install-Module -Name Posh-ACME.Deploy -Scope AllUsers -Force -SkipPublisherCheck
 
-# Cloud Flare requires a simple API token, securing the string to keep it safe
-$token = ConvertTo-SecureString 'nevercommittired' -AsPlainText -Force
+# To get the correct hostname use System.Net.Dns on a domain joined Server.
+$certName = ([System.Net.Dns]::GetHostEntry([string]"localhost").HostName)
+
+# Approach A: User Dialogue
+$cfTokenMessage = 'Please enter the cloudflare token to manage the DNS zone of ' + $certname + 'via Cloudflare API!'
+$cftokenuserentry = Read-Host $cfTokenMessage
+$token = ConvertTo-SecureString $cftokenuserentry -AsPlainText -Force
+# Enter the email for 
+$certNotificationMessage = 'Please enter the email to contact if the request for renewal fails'
+$certificateNotificationEmail = Read-Host $certNotificationMessage
+
+# Approach B: Manual Entry of variables, uncomment for automazation
+# $token = ConvertTo-SecureString 'nevercommittired' -AsPlainText -Force
+# $certificateNotificationEmail = 'it@gmservice.app' # Where to send notifications if the cert is not renewed. 
+
+# The variable of the token used.
 $pArgs = @{CFToken=$token}
 
 # The default certificate password is "poshacme", but we prefer some extra security. At this point you could also just use the CF token. 
 $CertPass = '$token'
-
-# To get the correct hostname independent of features installed, use System.Net.Dns (does not work on linux).
-$certName = ([System.Net.Dns]::GetHostEntry([string]"localhost").HostName)
-
-# This notification email is contacted if the certificate is close to expiration date.
-$notifyEmail = 'it@gmservice.app'
 
 # Constructs all Cert Params for a successful request.
 $certParams = @{
@@ -24,7 +32,7 @@ $certParams = @{
     PluginArgs = $pArgs
     AcceptTOS = $true
     Install = $true
-    Contact = $notifyEmail  # optional
+    Contact = $certificateNotificationEmail # optional
     Verbose = $true         # optional
 }
 
