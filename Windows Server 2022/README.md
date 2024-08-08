@@ -19,3 +19,8 @@ The script assumes the following:
 2. Copy the SSL request script and copy it to System32
 3. Execute `.\PsExec64.exe -i -h -s powershell.exe` from the Powershell
 4. Execute `ssl-request.ps1` from the elevated shell
+
+# Future Iterations
+- [ ] Download Scripts Automatically into System32
+- [ ] Ask for Token
+- [ ] Launch automatically into psexec
