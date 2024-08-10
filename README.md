@@ -1,5 +1,3 @@
-# ATTENTION WORK IN PROGRESS NOT PRODUCTION READY.
-  
 # SSL Everywhere
 Instructions and Scripts to Deploy SSL Certificates virtually everywhere. 
 
@@ -17,14 +15,15 @@ The set of scripts and instructions in this repository allow to deploy SSL certi
 
 # Covered Systems
 Right now we cover following systems: 
-1. Windows Server 2022 including RDP Host (Work in Progress), Terminal Server, IIS (Work in Progress), LDAPS and AD FS (Work in Progress)
-2. The installation of a centralized server to deploy certificates to additional systems (work in progress)
-3. The installation of a reverse proxy with valid certificates using PFsense and Squid Proxy (work in progress)
-4. The installation of a reverse proxy with socket support using nginx
-5. iDrac from a centralized server (work in progress)
-6. vCenter from a centralized server (work in progress)
-7. vSphere from a centralized server (work in progress)
-6. Proxmox VE 8.2
+- [X] Windows Server 2022 Personal Certificate Store & LDAPs
+- [x] Windows Server Remote Desktop Session Host
+- [ ] Windows Server Terminal Server
+- [ ] Windows Server IIS
+- [ ] Windows Server Active Directory Federation Server (obsolete?)
+- [ ] Unifi OS Control Server
+- [ ] Proxmox Server 8.2
+- [ ] iDrac 8
+- [ ] Dell Open Manage Server
 
 # Contributors 
 Willingfully or not, some people have significantly contributed to the creation of the scripts.
