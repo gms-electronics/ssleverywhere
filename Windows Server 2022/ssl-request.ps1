@@ -7,7 +7,7 @@ Install-Module -Name Posh-ACME.Deploy -Scope AllUsers -Force -SkipPublisherCheck
 $certName = ([System.Net.Dns]::GetHostEntry([string]"localhost").HostName)
 
 # Approach A: User Dialogue
-$CFTokenMessage = 'Please enter the cloudflare token to manage the DNS zone of ' + $certname + 'via Cloudflare API!'
+$CFTokenMessage = 'Please enter the cloudflare token to manage the DNS zone of ' + $certname + ' via Cloudflare API!'
 $CFtoken = Read-Host $CFTokenMessage
 $token = ConvertTo-SecureString $CFtoken -AsPlainText -Force
 # Enter the email for notifications if the cert is not renewed.
