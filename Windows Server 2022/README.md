@@ -11,6 +11,7 @@ The script assumes the following:
 * The deployment Script [win22-server-ssl-deploy.ps1]([url](https://github.com/gms-electronics/ssleverywhere/blob/main/Windows%20Server%202022/ssl-request.ps1))
 
 # Following dependencies are installed directly by the script
+* [NuGet]([url](https://www.powershellgallery.com/packages/NuGet/1.3.3))
 * [POSH-ACME]([url](https://poshac.me/docs/latest/))
 * [POSH-ACME.deploy]([url](https://poshac.me/docs/latest/))
 
@@ -22,5 +23,5 @@ The script assumes the following:
 
 # Future Iterations
 - [ ] Download Scripts Automatically into System32
-- [ ] Ask for Token
+- [X] Ask for Token
 - [ ] Launch automatically into psexec
