@@ -10,7 +10,7 @@ The set of scripts and instructions in this repository allow to deploy SSL certi
 
 # Requierements
 1. Cloudflare DNS Account (Free);
-2. In case of Windows Deployments the following scripts: [PSExec]([url](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec)), [POSH-ACME]([url](https://github.com/rmbolger/Posh-ACME)), [POSH-ACME.DEploy]([url](https://github.com/rmbolger/Posh-ACME.Deploy));
+2. In case of Windows Deployments the following scripts: [PSExec](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec), [POSH-ACME](https://github.com/rmbolger/Posh-ACME), [POSH-ACME.DEploy](https://github.com/rmbolger/Posh-ACME.Deploy);
 3. In case of Linux all implementations are made for Ubuntu, other distributions might or might not work and are not supported.
 
 # Covered Systems
@@ -27,4 +27,4 @@ Right now we cover following systems:
 
 # Contributors 
 Willingfully or not, some people have significantly contributed to the creation of the scripts.
-* [Ryan Bolger]([url](https://github.com/rmbolger)), who wrote an amazing collection of tools regarding the implementation of let's encrypt on windows via powershell
+* [Ryan Bolger](https://github.com/rmbolger), who wrote an amazing collection of tools regarding the implementation of let's encrypt on windows via powershell
