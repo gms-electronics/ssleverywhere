@@ -16,7 +16,7 @@ $certificateNotificationEmail = Read-Host $certNotificationMessage
 
 # Approach B: Manual Entry of variables, uncomment for automazation
 # $token = ConvertTo-SecureString 'nevercommittired' -AsPlainText -Force
-# $certificateNotificationEmail = 'it@gmservice.app' # Where to send notifications if the cert is not renewed. 
+# $certificateNotificationEmail = 'email@example.com' # Email for notifications if the cert is not renewed. 
 
 # The variable of the token effectively used to request DNS entry via API to Cloudflare.
 $pArgs = @{CFToken=$token}
