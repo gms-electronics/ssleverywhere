@@ -6,7 +6,7 @@ Install-Module -Name Posh-ACME.Deploy -Scope AllUsers -Force -SkipPublisherCheck
 # To get the correct hostname use System.Net.Dns on a domain joined Server.
 $certName = ([System.Net.Dns]::GetHostEntry([string]"localhost").HostName)
 
-# Approach A: User Dialogue
+# Approach A: User Dialogue to insert the cloudflare token and notiication email
 $CFTokenMessage = 'Please enter the cloudflare token to manage the DNS zone of ' + $certname + ' via Cloudflare API!'
 $CFtoken = Read-Host $CFTokenMessage
 $token = ConvertTo-SecureString $CFtoken -AsPlainText -Force
